@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load staticfiles i18n wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+    <h1>{{ page.main_title }}</h1>
+    {% image page.main_image width-500 as main_image %}
+    <img src="{{ main_image.url }}" alt="image">
+{% endblock %}

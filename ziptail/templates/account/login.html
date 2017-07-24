@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% load i18n wagtailcore_tags staticfiles tyndale_tags %}
+{% load account socialaccount %}
+
+
+{% block content %}
+
+    <div class="container">
+    <section class="main-content contact-posts">
+        <div class="container">
+            <div class="row">
+                <div class="post-contact">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-form">
+                                <div class="line-box"></div>
+                                    <h1 class="login-title">{% trans "Sign In" %}</h1>
+                                    <div class="line-box"></div>
+                                    {% get_providers as socialaccount_providers %}
+
+                                    {% if socialaccount_providers %}
+                                    <p>{% blocktrans with site.name as site_name %}Please sign in with one
+                                    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                                    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+                                    <div class="socialaccount_ballot">
+
+                                      <ul class="socialaccount_providers">
+                                        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                                      </ul>
+
+                                      <div class="login-or">{% trans 'or' %}</div>
+
+                                    </div>
+
+                                    {% include "socialaccount/snippets/login_extra.html" %}
+
+                                    {% else %}{% endif %}
+
+                                    <form class="login" method="POST" action="{% url 'account_login' %}">
+                                      {% csrf_token %}
+                                      {{ form.as_p }}
+                                      {% if redirect_field_value %}
+                                      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                      {% endif %}
+                                        <div class="line-box"></div>
+                                          <div class="submit-wrap">
+                                              <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                                              <button class="flat-button button-style style-v1" type="submit">{% trans "Sign In" %}</button>
+                                          </div>
+                                    </form>
+                            </div><!-- contact-form -->
+                        </div><!-- col-md-6 -->
+
+                        <div class="col-md-6">
+                            <div class="container">
+                            <div class="line-box"></div>
+                                <div class="row">
+                                    <h1 class="login-title">{% trans "Register" %}</h1>
+                                <div class="line-box"></div>
+                                    <p>{% blocktrans %}If you have not created an account yet, then please
+                                    <a href="{{ signup_url }}">register</a> first.{% endblocktrans %}</p>
+                                </div>
+                                <div class="spacer-small"></div>
+                                <div class="row">
+                                    <a class="button secondaryAction" href="{{ signup_url }}">{% trans "Register" %}</a>
+                                </div>
+                            </div><!-- /container-fluid -->
+                        </div>
+                    </div><!-- /row-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+        <section class="main-content contact-posts">
+            <div class="container">
+                <div class="row">
+                    <div class="post-contact">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-form">
+                                    <div class="line-box"></div>
+                                        <h1 class="login-title">{% trans "Log Out" %}</h1>
+                                        <div class="line-box"></div>
+                                        <p>{% trans 'Are you sure you want to log out?' %}</p>
+                                        <div class="spacer-small"></div>
+
+                                        <form method="post" action="{% url 'account_logout' %}">
+                                            {% csrf_token %}
+                                            {% if redirect_field_value %}
+                                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                                            {% endif %}
+                                            <div class="spacer-small"></div>
+                                            <div class="submit-wrap">
+                                                <button class="flat-button button-style style-v1" type="submit">{% trans 'Sign Out' %}</button>
+                                            </div>
+
+                                        </form>
+                                        <div class="spacer-small"></div>
+                                </div><!-- contact-form -->
+                            </div><!-- col-md-6 -->
+
+                            <div class="col-md-6">
+                                <div class="container">
+                                <div class="line-box"></div>
+                                    <div class="row">
+
+                                    </div>
+                                </div><!-- /container-fluid -->
+                            </div>
+                        </div><!-- /row-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

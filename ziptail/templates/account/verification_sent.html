@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+    <section class="main-content contact-posts">
+        <div class="container">
+            <div class="row">
+                <div class="post-contact">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="contact-form">
+                                <div class="line-box"></div>
+                                    <h1 class="login-title">{% trans "Verify Your E-mail Address" %}</h1>
+                                    <div class="line-box"></div>
+
+                                    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. {% endblocktrans %}</p>
+                                    <p>{% blocktrans %}Please contact us if you do not receive it within a few minutes.{% endblocktrans %} </p>
+                            </div><!-- contact-form -->
+                        </div><!-- col-md-6 -->
+
+                        <div class="col-md-6">
+                            <div class="container">
+
+                            </div><!-- /container-fluid -->
+                        </div>
+                    </div><!-- /row-->
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+{% endblock %}
