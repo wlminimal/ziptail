@@ -13,5 +13,24 @@ from wagtail.wagtailforms.edit_handlers import FormSubmissionsPanel
 from modelcluster.fields import ParentalKey
 
 
-class HomePage(Page):
-    pass
+class FormField(AbstractFormField):
+    page = ParentalKey('HomePage', related_name='form_fields')
+
+
+class HomePage(AbstractEmailForm):
+    thank_you_text = RichTextField(
+        default="Thank you for subscription."
+    )
+
+    content_panels = AbstractEmailForm.content_panels + [
+        FormSubmissionsPanel(),
+        InlinePanel('form_fields', label='Subscription Form Fields'),
+        FieldPanel('thank_you_text', classname='full'),
+        MultiFieldPanel([
+            FieldRowPanel([
+                FieldPanel('from_address', classname='col6'),
+                FieldPanel('to_address', classname='col6'),
+            ]),
+            FieldPanel('subject'),
+        ], 'Email'),
+    ]

@@ -9,14 +9,8 @@
     <div class="div-block-2">
       <img class="image" sizes="(max-width: 479px) 77vw, (max-width: 767px) 73vw, 371px" src="{% static 'images/logo-1-png.png' %}" srcset="{% static 'images/logo-1-png-p-500.png' %} 500w, {% static 'images/logo-1-png.png' %} 742w" width="371">
     </div>
-    <div class="form-block w-form coming-soon">
-      <form class="form" action="{% pageurl self %}" method="post">
-        {% csrf_token %}
-        {{ form.email }}
-        {{ form.number }}
-        <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="Submit">
-      </form>
-
+    <div class="form-block w-form">
+      <h1> {{ page.thank_you_text }}</h1>
     </div>
     <h4 class="address">1301 Ocean Front Walk #17<br> Venice, CA 90291</h4>
   </div>

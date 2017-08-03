@@ -1,0 +1,28 @@
+.coming-soon label {
+  visibility: hidden;
+}
+
+.coming-soon #id_email, .coming-soon #id_number {
+  margin-right: 0px;
+  margin-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+
+
+}

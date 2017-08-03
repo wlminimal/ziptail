@@ -1,0 +1,381 @@
+.section {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .46), hsla(0, 0%, 100%, .46)), url('../images/pexels-photo.jpg');
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .46), hsla(0, 0%, 100%, .46)), url('../images/pexels-photo.jpg');
+  background-position: 0px 0px, 50% 0px;
+  background-size: auto, cover;
+}
+
+.flexbox {
+  position: static;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: auto;
+  padding: 50px 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: -1px -1px 50px -11px rgba(0, 0, 0, .28);
+  -webkit-perspective: 1179px;
+  perspective: 1179px;
+}
+
+.form-block {
+  width: 75%;
+  margin-bottom: 25px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.heading-1 {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  font-family: 'Kaushan Script', sans-serif;
+  color: #000;
+  font-size: 58px;
+  line-height: 74px;
+}
+
+.heading-3 {
+  display: block;
+  margin-top: -4px;
+  padding: 0px 23px 23px;
+  float: right;
+  -webkit-transform: rotateX(27deg) rotateY(-30deg) rotateZ(0deg);
+  transform: rotateX(27deg) rotateY(-30deg) rotateZ(0deg);
+  font-family: Righteous, sans-serif;
+  color: #a0fe65;
+  font-size: 78px;
+  text-transform: capitalize;
+  text-shadow: 6px 6px 14px #fa016d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.heading-2 {
+  display: inline;
+  font-family: 'Kaushan Script', sans-serif;
+  color: #000;
+  font-size: 58px;
+  line-height: 74px;
+}
+
+.div-block-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-perspective: 1143px;
+  perspective: 1143px;
+  text-align: right;
+}
+
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.text-field {
+  margin-right: 0px;
+  margin-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.text-span {
+  color: #000;
+  text-shadow: 3px 3px 7px #a0fe65;
+}
+
+.heading-4 {
+  padding-right: 30px;
+  font-family: 'Kaushan Script', sans-serif;
+  font-size: 78px;
+  line-height: 84px;
+  text-align: center;
+}
+
+.heading-5 {
+  padding-right: 41px;
+  font-family: Monoton, sans-serif;
+  font-size: 98px;
+  line-height: 84px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.text-span-2 {
+  font-family: Monoton, sans-serif;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.text-span-3 {
+  color: #65b5fe;
+  text-align: left;
+}
+
+.text-span-4 {
+  padding-left: 30px;
+  font-family: Monoton, sans-serif;
+  font-size: 98px;
+  font-weight: 400;
+}
+
+.text-span-5 {
+  padding-left: 30px;
+  font-family: Monoton, sans-serif;
+  color: #ff00c2;
+  font-size: 98px;
+  font-weight: 400;
+}
+
+.sub-flexbox {
+  margin-top: -150px;
+  margin-bottom: 45px;
+}
+
+.comingsoon-section {
+  height: 100vh;
+  background-image: url('../images/456.png'), url('../images/city-sketch-3.png');
+  background-position: 50% 0px, 50% 0px;
+  background-size: cover, cover;
+}
+
+.life-heading {
+  font-family: Righteous, sans-serif;
+  font-size: 78px;
+  line-height: 114px;
+  font-weight: 400;
+}
+
+.ziptail-heading {
+  font-family: Righteous, sans-serif;
+  font-size: 78px;
+  line-height: 94px;
+  font-weight: 500;
+}
+
+.submit-button {
+  margin-left: 15px;
+}
+
+.main-flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.address {
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.full-section {
+  height: 100vh;
+}
+
+@media (max-width: 991px) {
+  .flexbox {
+    width: 85%;
+    height: auto;
+  }
+  .form-block {
+    width: 85%;
+  }
+  .div-block-2 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .heading-4 {
+    padding-right: 50px;
+  }
+  .heading-5 {
+    padding-right: 0px;
+    font-size: 78px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+    background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .46), hsla(0, 0%, 100%, .46)), url('../images/pexels-photo.jpg');
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .46), hsla(0, 0%, 100%, .46)), url('../images/pexels-photo.jpg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+  }
+  .flexbox {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .form-block {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+  .div-block-2 {
+    margin-bottom: 20px;
+  }
+  .text-field {
+    margin-right: 5px;
+    margin-left: 0px;
+  }
+  .heading-4 {
+    margin-top: 13px;
+    padding-right: 0px;
+    font-size: 50px;
+    line-height: 54px;
+    text-align: center;
+  }
+  .heading-5 {
+    font-size: 58px;
+    line-height: 64px;
+  }
+  .submit-button {
+    margin-left: 0px;
+  }
+  .address {
+    padding: 0px 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 479px) {
+  .section {
+    background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .46), hsla(0, 0%, 100%, .46)), url('../images/pexels-photo.jpg');
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, .46), hsla(0, 0%, 100%, .46)), url('../images/pexels-photo.jpg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+  }
+  .flexbox {
+    width: 95%;
+    height: auto;
+  }
+  .form-block {
+    margin-bottom: 10px;
+  }
+  .div-block-2 {
+    margin-bottom: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: left;
+  }
+  .heading-4 {
+    padding-right: 0px;
+    font-size: 40px;
+    line-height: 44px;
+  }
+  .heading-5 {
+    padding-right: 0px;
+    font-size: 48px;
+    line-height: 44px;
+    text-align: center;
+  }
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+  .address {
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0px;
+  }
+  .image {
+    margin-bottom: 25px;
+  }
+}
+
