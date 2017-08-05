@@ -31,3 +31,10 @@
   text-transform: uppercase;
   text-align: center;
 }
+
+
+
+.errors ul {
+  list-style-type: none;
+  color: red;
+}
