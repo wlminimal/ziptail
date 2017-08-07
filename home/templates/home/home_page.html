@@ -2,7 +2,9 @@
 {% load staticfiles i18n wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
-
+{% block title %}
+  {{ page.title }}
+{% endblock %}
 {% block content %}
 <div class="section">
   <div class="flexbox">

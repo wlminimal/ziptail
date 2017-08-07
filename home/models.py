@@ -60,6 +60,8 @@ class HomePage(Page):
             }
         )
 
+        content_panels = Page.content_panels
+
 
 class ThankYouPage(Page):
     thank_you_text = models.CharField(
