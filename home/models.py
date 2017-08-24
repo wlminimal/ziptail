@@ -17,6 +17,7 @@ from modelcluster.fields import ParentalKey
 
 from .forms import SubscriptionForm
 from mailchimp3 import MailChimp
+from mailchimp3 import helpers
 
 
 class HomePage(Page):
@@ -35,13 +36,18 @@ class HomePage(Page):
                 # Subscribe to Mailchimp List
                 client = MailChimp(
                     settings.MAILCHIMP_USERNAME,
-                    settings.MAILCHIMP_API_KEY
+                    settings.MAILCHIMP_API_KEY,
+                    timeout=10.0
                 )
-                client.lists.members.create(
+
+                subscriber_hash = helpers.get_subscriber_hash(email)
+
+                client.lists.members.create_or_update(
                     settings.MAILCHIMP_LIST_ID,
+                    subscriber_hash,
                     {
                         'email_address': email,
-                        'status': 'subscribed',
+                        'status_if_new': 'subscribed',
                         'merge_fields': {
                             'PNUMBER': pnumber_format
                         }
