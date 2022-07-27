@@ -10,7 +10,7 @@ contextlib2==0.5.5
 defusedxml==0.5.0
 Django==1.11.4
 django-allauth==0.30.0
-django-anymail==0.8
+django-anymail==1.2.1
 django-braces==1.11.0
 django-crispy-forms==1.6.1
 django-debug-toolbar==1.6
